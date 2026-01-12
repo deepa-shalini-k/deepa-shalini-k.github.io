@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deepa Shalini K — Professional Portfolio</title>
+  <title>Deepa Shalini K — Portfolio</title>
 
   <!-- Optional: clean, professional font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,7 @@
       <div class="container">
         <section class="panel" aria-label="Professional details tabs">
           <nav class="tabs" role="tablist" aria-label="Sections">
-            <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-work" id="btn-work">
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-work" id="btn-work">
               Work Experience
             </button>
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-achievements" id="btn-achievements">
@@ -60,14 +60,14 @@
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-speaking" id="btn-speaking">
               Thought Leadership
             </button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-product" id="btn-product">
+            <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-product" id="btn-product">
               Product Portfolio
             </button>
           </nav>
 
           <div class="tab-content">
             <!-- TAB 1: Work Experience -->
-            <div class="tab-pane active" id="tab-work" role="tabpanel" aria-labelledby="btn-work">
+            <div class="tab-pane" id="tab-work" role="tabpanel" aria-labelledby="btn-work">
               <h2 class="section-title">Work Experience</h2>
               <p class="lead">
                 Replace placeholders with your roles, scope, outcomes, and measurable impact.
@@ -230,16 +230,26 @@
             </div>
 
             <!-- TAB 4: Product Portfolio -->
-            <div class="tab-pane" id="tab-product" role="tabpanel" aria-labelledby="btn-product">
-              <h2 class="section-title">Product Portfolio</h2>
-              <p class="lead">
-                You can start with a single product idea and expand later. Keep this section structured and skimmable.
+            <div class="tab-pane active" id="tab-product" role="tabpanel" aria-labelledby="btn-product">
+              <h2 class="section-title">Product Idea: ChaRtBot</h2>
+
+              <p class="lead" style="margin-top:-6px;">
+                ChaRtBot is a visual analytics assistant that helps users understand datasets through natural-language prompts, generating interactive visualisations with full visibility into both the data and the AI-generated code.
               </p>
 
-              <h3 class="section-title" style="font-size:16px;margin-top:10px;">Product Idea: <span style="font-weight:800;">[Your Product Name]</span></h3>
-              <p class="lead" style="margin-top:-6px;">
-                One-liner placeholder: what it is, who it’s for, and the main value it unlocks.
-              </p>
+              <div style="text-align: center; margin: 2em auto; padding: 1.5em; background: #fbfaf5; border-radius: 8px; max-width: 600px;">
+                <a href="https://huggingface.co/spaces/deepa-shalini/ChaRtBot" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style="display: inline-block; padding: 0.75em 2em; background: #2d6a4f; color: white; font-weight: 600; font-size: 1.05em; text-decoration: none; border-radius: 6px; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+                   onmouseover="this.style.background='#1b4332'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'; this.style.transform='translateY(-2px)';"
+                   onmouseout="this.style.background='#2d6a4f'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'; this.style.transform='translateY(0)';">
+                  Explore the Live MVP
+                </a>
+                <p style="margin: 0.75em 0 0 0; font-size: 0.9em; color: #6c757d; line-height: 1.5;">
+                  No signup required. Upload a CSV and generate interactive charts in seconds.
+                </p>
+              </div>
 
               <div class="accordion" aria-label="Product details accordion">
                 <details class="acc">
@@ -248,15 +258,37 @@
                     <span class="chev" aria-hidden="true">⌄</span>
                   </summary>
                   <div class="acc-body">
+                    <h4 style="font-size: 1.1em; font-weight: 600; margin-bottom: 0.5em; text-decoration: underline;">Product Vision</h4>
                     <p>
-                      Placeholder: vision statement, target user, core problem, differentiation, strategic bets,
-                      and how it aligns with business goals.
+                      ChaRtBot is a visual analytics assistant that helps individuals explore and understand data through fast, interactive charts — using natural language instead of manual coding or rigid dashboards.
                     </p>
-                    <ul>
-                      <li>Target user/persona: [Placeholder]</li>
-                      <li>North Star value: [Placeholder]</li>
-                      <li>Competitive advantage: [Placeholder]</li>
-                    </ul>
+                    <p>
+                      The vision is to make data exploration visual-first, reliable, and transparent, enabling users to move from raw data to insight in seconds while keeping humans firmly in the loop through dataset inspection, generated code visibility, and exportable outputs.
+                    </p>
+                    <p>
+                      Unlike text-based AI tools, ChaRtBot responds with interactive visualisations rather than paragraphs. Unlike most analytics tools, it is web-based, lightweight, and requires no setup, installation, or template configuration.
+                    </p>
+                    
+                    <h4 style="font-size: 1.1em; font-weight: 600; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Product Strategy</h4>
+                    <p>
+                      ChaRtBot is intentionally designed around four core principles:
+                    </p>
+                    <p><strong>1. Visual-first by default</strong></p>
+                    <p>
+                      The primary output is always a chart, not text. Visuals enable faster pattern recognition and decision-making.
+                    </p>
+                    <p><strong>2. Speed as a feature</strong></p>
+                    <p>
+                      Charts render in seconds, supporting rapid exploration, prompt refinement, and iteration.
+                    </p>
+                    <p><strong>3. Transparency and trust</strong></p>
+                    <p>
+                      Users can inspect the underlying dataset, view the generated code, and export interactive outputs — ensuring clarity and human oversight at every step.
+                    </p>
+                    <p><strong>4. Individual-first adoption</strong></p>
+                    <p>
+                      ChaRtBot is built for personal use cases such as research, learning, exploratory analysis, and lightweight project work, without the complexity or overhead of enterprise BI tools.
+                    </p>
                   </div>
                 </details>
 
@@ -266,13 +298,130 @@
                     <span class="chev" aria-hidden="true">⌄</span>
                   </summary>
                   <div class="acc-body">
+                    <h4 style="font-size: 1.2em; font-weight: 700; margin-bottom: 0.5em;">Product Roadmap</h4>
                     <p>
-                      Placeholder: phased roadmap (Now / Next / Later) and key capabilities. Keep it outcome-driven.
+                      ChaRtBot is being developed in phases, with each stage focused on improving reliability, clarity, and analytical depth.
                     </p>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 0: Current MVP</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Deliver instant, shareable visual insights from user-provided data</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
                     <ul>
-                      <li><strong>Now:</strong> [Placeholder — MVP outcomes]</li>
-                      <li><strong>Next:</strong> [Placeholder — scale & depth]</li>
-                      <li><strong>Later:</strong> [Placeholder — expansion & differentiation]</li>
+                      <li>CSV upload with interactive data table (sorting, filtering, scanning)</li>
+                      <li>Natural-language prompts to generate interactive charts</li>
+                      <li>Support for complex subplotting and multi-chart layouts</li>
+                      <li>Visibility into the generated Python code</li>
+                      <li>Interactive HTML export for sharing and reuse</li>
+                      <li>Chart image export</li>
+                      <li>Web-based, link-only access (no installation required)</li>
+                      <li>Chart rendering within seconds</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
+                    <ul>
+                      <li>Faster visual exploration compared to text-based AI tools and desktop software</li>
+                      <li>Shareable, interactive outputs suitable for projects and presentations</li>
+                      <li>Transparency through dataset inspection and code visibility</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 1: Explainability & Reliability</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Expand accessibility to non-technical users while increasing trust and robustness</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
+                    <ul>
+                      <li>Plain-language explanations of generated code</li>
+                      <li>Visual explanations of data aggregations and transformations</li>
+                      <li>Clear communication of assumptions made by the system</li>
+                      <li>Verification checks before execution (e.g. schema and column validation)</li>
+                      <li>Multi-pass code correction to recover from errors</li>
+                      <li>Fallback chart strategies when complex visualisations fail</li>
+                      <li>User confidence checks and satisfaction feedback</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">Why this matters</strong></p>
+                    <ul>
+                      <li>Reduces failed chart generations</li>
+                      <li>Makes analysis understandable to non-Python and non-technical users</li>
+                      <li>Maintains high transparency while improving reliability</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 2: Conversational Refinement & Intent Clarification</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Handle ambiguity before it results in incorrect or failed outputs</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
+                    <ul>
+                      <li>Detection of ambiguous or incomplete prompts</li>
+                      <li>Targeted follow-up questions to clarify intent</li>
+                      <li>Explicit declaration of assumptions when clarification is skipped</li>
+                      <li>Suggestions for more suitable chart structures</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
+                    <ul>
+                      <li>Fewer incorrect charts</li>
+                      <li>More collaborative, analyst-like interaction</li>
+                      <li>Reduced need for trial-and-error prompting</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 3: Advanced EDA & Statistical Analysis</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Move beyond chart generation into deeper analytical reasoning</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
+                    <ul>
+                      <li>Exploratory data analysis (distributions, correlations, outliers)</li>
+                      <li>Statistical analysis with visual explanations</li>
+                      <li>Automatic EDA flows for large or complex datasets</li>
+                      <li>Advanced techniques such as PCA, clustering, and dimensionality reduction</li>
+                      <li>Chart recommendations based on data characteristics</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
+                    <ul>
+                      <li>Enables complex mathematical and statistical analysis through visuals</li>
+                      <li>Suitable for research-grade and large-dataset exploration</li>
+                      <li>Positions ChaRtBot as a visual analysis companion rather than a charting tool</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 4: Machine Learning–Augmented Analysis</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Enable machine learning–driven reasoning for large datasets, grounded in thorough exploratory analysis and communicated through visualisations.</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
+                    <ul>
+                      <li>Scalable exploratory data analysis for large datasets</li>
+                      <li>Guided transition from EDA to modelling</li>
+                      <li>Automatic selection of appropriate ML approaches based on data characteristics</li>
+                      <li>Model training for prediction and classification tasks</li>
+                      <li>Accuracy evaluation using visual diagnostics (e.g. error distributions, confusion matrices)</li>
+                      <li>Clear reporting of accuracy, model performance, limitations, and assumptions</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
+                    <ul>
+                      <li>Enables predictive and inferential analysis without manual model selection</li>
+                      <li>Ensures ML decisions are explainable and justified, not opaque</li>
+                      <li>Helps users understand why a model was chosen and how well it performs</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 5: Real-Time & External Data Integration</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Reduce dependency on manually uploaded datasets</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
+                    <ul>
+                      <li>Ability to pull real-time or public data from the web</li>
+                      <li>Clear citation and source visibility</li>
+                      <li>Data augmentation by combining uploaded datasets with external data</li>
+                      <li>Freshness and provenance checks</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
+                    <ul>
+                      <li>Faster insights without manual data collection</li>
+                      <li>Support for time-sensitive and contextual analyses</li>
+                      <li>Broader analytical possibilities beyond static files</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 6: Publication-Grade Outputs & Sharing</h5>
+                    <p><strong style="font-size: 1.05em;">Goal:</strong> Make ChaRtBot the final step before communication and publication</p>
+                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
+                    <ul>
+                      <li>Publication-ready chart styling and themes</li>
+                      <li>High-resolution exports for papers, posters, and presentations</li>
+                      <li>Versioned chart history</li>
+                      <li>Shareable links with embedded interactivity</li>
+                    </ul>
+                    <p><strong style="font-size: 1.05em;">Strategic Impact</strong></p>
+                    <ul>
+                      <li>Completes the workflow from data → analysis → communication</li>
+                      <li>Appeals to researchers, analysts, and professionals who need polished outputs</li>
                     </ul>
                   </div>
                 </details>
@@ -284,13 +433,55 @@
                   </summary>
                   <div class="acc-body">
                     <p>
-                      Placeholder: define leading + lagging indicators. Add baseline/target once you have them.
+                      ChaRtBot's success is measured across <strong>adoption, reliability, and user trust</strong>, with additional metrics tracking the uptake and impact of advanced analytical capabilities as the product evolves.
                     </p>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">1. Adoption & Engagement</h5>
+                    <p><strong style="font-size: 1.05em;">Why:</strong> To understand whether users are finding value in ChaRtBot and returning to it as a regular part of their data exploration workflow.</p>
+                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
                     <ul>
-                      <li>Adoption: [e.g., weekly active users, activation rate]</li>
-                      <li>Retention: [e.g., D30 retention, cohort repeat usage]</li>
-                      <li>Value: [e.g., time saved, revenue influenced, CSAT/NPS]</li>
-                      <li>Quality/Reliability: [e.g., error rate, latency, SLA]</li>
+                      <li>Weekly Active Users (WAU)</li>
+                      <li>Average number of charts generated per session</li>
+                      <li>Percentage of sessions with multiple or conversational follow-up prompts <em>(Phase 2+)</em></li>
+                      <li>Usage rate of multi-chart and subplot layouts </li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">2. Performance & Reliability</h5>
+                    <p><strong style="font-size: 1.05em;">Why:</strong> Speed and reliability are core differentiators. Charts must render quickly and consistently for users to trust and continue using the product.</p>
+                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
+                    <ul>
+                      <li>Median time to first chart </li>
+                      <li>Chart render success rate</li>
+                      <li>Error recovery rate after failed executions <em>(Phase 1+)</em></li>
+                      <li>Drop-off rate during chart generation</li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">3. Trust & Transparency</h5>
+                    <p><strong style="font-size: 1.05em;">Why:</strong> ChaRtBot prioritises human-in-the-loop analysis. These metrics assess whether users are engaging with explanations, verifying outputs, and confidently reusing results.</p>
+                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
+                    <ul>
+                      <li>Percentage of users viewing generated code </li>
+                      <li>Percentage of users viewing non-technical code explanations <em>(Phase 1+)</em></li>
+                      <li>Frequency of HTML and image exports </li>
+                      <li>User confidence and satisfaction feedback after chart generation <em>(Phase 1+)</em></li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">4. Analytical Depth & Advanced Feature Adoption</h5>
+                    <p><strong style="font-size: 1.05em;">Why:</strong> To measure the product's evolution from basic chart generation to deeper visual reasoning and advanced analysis.</p>
+                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
+                    <ul>
+                      <li>Percentage of sessions using EDA and statistical features <em>(Phase 3+)</em></li>
+                      <li>Percentage of datasets analysed using machine learning features <em>(Phase 4+)</em></li>
+                      <li>Frequency of model comparison or re-training based on feedback <em>(Phase 4+)</em></li>
+                      <li>User-reported confidence in ML-driven insights <em>(Phase 4+)</em></li>
+                    </ul>
+                    
+                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">5. Retention & Power-User Growth</h5>
+                    <p><strong style="font-size: 1.05em;">Why:</strong> To understand whether advanced capabilities meaningfully increase long-term value and user retention.</p>
+                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
+                    <ul>
+                      <li>Retention rate of advanced-feature users vs basic users <em>(Phase 3+)</em></li>
+                      <li>Longitudinal increase in feature depth per returning user</li>
                     </ul>
                   </div>
                 </details>
