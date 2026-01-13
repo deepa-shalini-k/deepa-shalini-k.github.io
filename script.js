@@ -16,25 +16,27 @@ tabButtons.forEach(btn => {
 });
 
 /* =========================
-   Carousel logic
+   Carousel logic (only run if carousel exists)
    ========================= */
 const track = document.getElementById('carouselTrack');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const dots = Array.from(document.querySelectorAll('.dot'));
-const slideCount = dots.length;
-let index = 0;
+if (track) {
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const slideCount = dots.length;
+  let index = 0;
 
-function updateCarousel(i){
-  index = (i + slideCount) % slideCount;
-  track.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(d => d.classList.remove('active'));
-  dots[index].classList.add('active');
+  function updateCarousel(i){
+    index = (i + slideCount) % slideCount;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => updateCarousel(index - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => updateCarousel(index + 1));
+  dots.forEach(d => d.addEventListener('click', () => updateCarousel(Number(d.dataset.slide))));
+
+  // Optional: auto-advance (comment out if you prefer manual)
+  // setInterval(() => updateCarousel(index + 1), 6500);
 }
-
-prevBtn.addEventListener('click', () => updateCarousel(index - 1));
-nextBtn.addEventListener('click', () => updateCarousel(index + 1));
-dots.forEach(d => d.addEventListener('click', () => updateCarousel(Number(d.dataset.slide))));
-
-// Optional: auto-advance (comment out if you prefer manual)
-// setInterval(() => updateCarousel(index + 1), 6500);
