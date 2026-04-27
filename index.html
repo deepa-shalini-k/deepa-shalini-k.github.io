@@ -137,7 +137,7 @@
               Leadership Positions
             </button>
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-speaking" id="btn-speaking">
-              Thought Leadership
+              Thought Leadership & Writing
             </button>
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-product" id="btn-product">
               Product Portfolio
@@ -322,14 +322,94 @@
               </div>
             </div>
 
-            <!-- TAB 4: Thought Leadership (Speaking/Moderation etc.) -->
+            <!-- TAB 4: Thought Leadership & Writing (Speaking/Moderation etc.) -->
             <div class="tab-pane" id="tab-speaking" role="tabpanel" aria-labelledby="btn-speaking">
-              <h2 class="section-title">Thought Leadership</h2>
-              <p class="lead">
-                A confident public speaker and moderator, known for clear thinking, strong stage presence, and engaging senior leaders and large audiences with executive-ready communication.
-              </p>
+              
+              <!-- Two-Feature Layout -->
+              <div class="two-feature-grid">
+                
+                <!-- LEFT: Speaking & Moderation -->
+                <div class="feature-card">
+                  <h3>Speaking & Moderation</h3>
+                  <p style="margin: 0 0 1.5em 0; font-size: 0.95em; color: #2f3e37; line-height: 1.6;">
+                    A confident public speaker and moderator, known for clear thinking, strong stage presence, and engaging senior leaders and large audiences with executive-ready communication.
+                  </p>
 
-              <!-- Gallery Grid -->
+                  <div class="featured-speaking-image">
+                    <span class="photo-badge">Moderator</span>
+                    <img src="images/SPEAKING_2.jpg" alt="Panel Discussion on Personal Branding">
+                    <div class="gallery-caption">Panel Discussion • 2025 • Personal Branding</div>
+                  </div>
+
+                  <a href="#full-gallery" class="view-gallery-link">View full gallery ↓</a>
+                </div>
+
+                <!-- RIGHT: Writing & Publications -->
+                <div class="feature-card">
+                  <h3>Writing & Publications</h3>
+                  <p style="margin: 0 0 1.5em 0; font-size: 0.95em; color: #2f3e37; line-height: 1.6;">
+                    I explore how we extract meaningful insights from data, how AI can accelerate that process, and how the right interfaces help teams visualize ideas early, reason better, and make decisions faster.
+                  </p>
+
+                  <a href="https://plotly.com/university/the-golden-trilogy-with-plotly/" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     style="text-decoration: none; display: block;">
+                    <div style="
+                      background: #ffffff;
+                      border-radius: 8px;
+                      padding: 1.25em;
+                      border: 1px solid rgba(15,61,46,.12);
+                      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+                      transition: all 0.25s ease;
+                    "
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.10)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.06)'">
+                      
+                      <span style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        font-size: 0.7em;
+                        font-weight: 600;
+                        color: #ffffff;
+                        background: #000000;
+                        padding: 4px 10px;
+                        border-radius: 999px;
+                        margin-bottom: 0.6em;
+                      ">
+                        <img src="https://images.prismic.io/plotly-marketing-website-2/8f977c91-7b4e-4367-8228-26fbba2506e4_69e12d6a-fb65-4b6e-8423-9465a29c6028_plotly-logo-sm.png?auto=format%2Ccompress&fit=max&w=256" 
+                             alt="Plotly" 
+                             style="height: 14px; width: auto; display: inline-block; margin: 0;" />
+                        Publication
+                      </span>
+
+                      <h4 style="margin: 0 0 0.4em 0; font-size: 1.15em; font-weight: 600; color: #0f3d2e;">
+                        The Golden Trilogy with Plotly
+                      </h4>
+
+                      <p style="margin: 0 0 0.6em 0; font-size: 0.8em; color: #6c757d;">
+                        Published on <strong>Plotly</strong> • Apr 2026
+                      </p>
+
+                      <p style="margin: 0; font-size: 0.88em; color: #2f3e37; line-height: 1.5;">
+                        Explores how the same dataset can evolve from standard financial charts to expressive, narrative-driven visualizations.
+                      </p>
+
+                      <p style="margin-top: 0.8em; font-size: 0.85em; font-weight: 500; color: #0f3d2e;">
+                        Read article →
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+
+              <!-- Full Gallery Section -->
+              <div id="full-gallery" class="gallery-divider">
+                Speaking Engagements
+              </div>
+
               <div class="speaking-gallery" aria-label="Speaking photos gallery">
                 <div class="gallery-item">
                   <span class="photo-badge">Moderator</span>
@@ -362,6 +442,7 @@
                   <div class="gallery-caption">Science Fest • 2017 • Annual Science Fest, MCC</div>
                 </div>
               </div>
+
             </div>
 
             <!-- TAB 5: Product Portfolio -->
