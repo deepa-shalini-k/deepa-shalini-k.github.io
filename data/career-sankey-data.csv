@@ -1,0 +1,27 @@
+role,role_dates,skill_area,skill,result_headline,result_description,projected,ribbon_weight
+Product Owner III,Sep 2025 - now,GenAI & Agentic AI,Agentic AI & prototyping,$30M,projected savings in 2027,yes,2
+Product Owner III,Sep 2025 - now,Stakeholder Alignment,Discovery & requirements,$30M,projected savings in 2027,yes,1
+Product Owner III,Sep 2025 - now,Stakeholder Alignment,AI evaluation & governance,$30M,projected savings in 2027,yes,1
+Product Owner III,Sep 2025 - now,Stakeholder Alignment,KPIs & value measurement,$30M,projected savings in 2027,yes,1
+Product Owner III,Sep 2025 - now,GenAI & Agentic AI,RAG & LLMs,$3.1M,"annual bookings, renewals",no,2
+Product Owner III,Sep 2025 - now,Product Strategy & Delivery,Prototype to production,$3.1M,"annual bookings, renewals",no,1
+Product Owner III,Sep 2025 - now,Stakeholder Alignment,Discovery & requirements,$3.1M,"annual bookings, renewals",no,2
+Product Owner III,Sep 2025 - now,Stakeholder Alignment,KPIs & value measurement,$3.1M,"annual bookings, renewals",no,2
+Product Owner III,Sep 2025 - now,Product Strategy & Delivery,Roadmap & backlog,$3.5M / 25x,annual savings / user adoption,no,2
+Product Owner III,Sep 2025 - now,Product Strategy & Delivery,KPIs & value measurement,$3.5M / 25x,annual savings / user adoption,no,1
+Product Owner III,Sep 2025 - now,Product Strategy & Delivery,Discovery & requirements,$3.5M / 25x,annual savings / user adoption,no,1
+Product Owner III,Sep 2025 - now,GenAI & Agentic AI,Agentic AI & prototyping,-30%,issue resolution time,no,1
+Product Owner III,Sep 2025 - now,Stakeholder Alignment,Executive storytelling,-30%,issue resolution time,no,1
+Product Owner II,Sep 2024 - Aug 2025,GenAI & Agentic AI,RAG & LLMs,$2M / +40%,bookings / qualified opportunities,no,3
+Product Owner II,Sep 2024 - Aug 2025,Product Strategy & Delivery,Roadmap & backlog,$2M / +40%,bookings / qualified opportunities,no,2
+Product Owner II,Sep 2024 - Aug 2025,Stakeholder Alignment,Discovery & requirements,$2M / +40%,bookings / qualified opportunities,no,1
+Product Owner II,Sep 2024 - Aug 2025,Stakeholder Alignment,Executive storytelling,$2M / +40%,bookings / qualified opportunities,no,1
+Product Owner II,Sep 2024 - Aug 2025,Product Strategy & Delivery,KPIs & value measurement,-99%,cost per image,no,1
+Product Owner II,Sep 2024 - Aug 2025,Product Strategy & Delivery,Discovery & requirements,-99%,cost per image,no,2
+Software Engineer II,May 2022 - Sep 2024,"LIMS, Engineering & Data","Python, SQL & C#",3 wins,enterprise deals in 3 months,no,8
+Software Engineer II,May 2022 - Sep 2024,Stakeholder Alignment,Executive storytelling,3 wins,enterprise deals in 3 months,no,8
+Software Engineer II,May 2022 - Sep 2024,Product Strategy & Delivery,Discovery & requirements,3 wins,enterprise deals in 3 months,no,4
+Software Engineer II,May 2022 - Sep 2024,Product Strategy & Delivery,Prototype to production,3 wins,enterprise deals in 3 months,no,4
+Software Engineer II,May 2022 - Sep 2024,"LIMS, Engineering & Data",ML & forecasting,-40%,customer customisation effort,no,8
+Software Engineer I,Aug 2020 - May 2022,"LIMS, Engineering & Data","Python, SQL & C#",-40%,customer customisation effort,no,9
+Software Engineer I,Aug 2020 - May 2022,"LIMS, Engineering & Data",BI & dashboards,-40%,customer customisation effort,no,12

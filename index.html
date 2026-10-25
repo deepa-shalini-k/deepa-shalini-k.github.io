@@ -27,18 +27,17 @@
   <meta property="twitter:image" content="https://deepa-shalini-k.github.io/images/profile_photo.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="images/profile_photo.jpg" />
-  <link rel="shortcut icon" type="image/jpeg" href="images/profile_photo.jpg" />
-  <link rel="apple-touch-icon" href="images/profile_photo.jpg" />
+  <link rel="icon" type="image/jpeg" href="./images/profile_photo.jpg" />
+  <link rel="apple-touch-icon" href="./images/profile_photo.jpg" />
 
-  <!-- Optional: clean, professional font -->
+  <!-- Fonts: Fraunces (headings) + Inter (body) + IBM Plex Mono (Sankey data labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- External CSS with cache busting -->
-  <link rel="stylesheet" href="./styles.css?v=2">
-  
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="./styles.css?v=4">
+
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -110,767 +109,107 @@
 </head>
 
 <body>
-  <div class="page">
-    <!-- =========================
-         SECTION 1 – PHOTO + NAME + SUMMARY
-         ========================= -->
-    <header class="hero">
-      <div class="container">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Site navigation (keep identical on every page; script.js marks the current link) ===== -->
+  <header class="site-header on-dark">
+    <nav class="site-nav wrap" aria-label="Main">
+      <a class="brand" href="/" aria-label="Deepa Shalini K, home">DEEPA SHALINI K</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Open menu</span><span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./product-portfolio/">Product Portfolio</a></li>
+        <li><a href="./global-recognition/">Global Recognition</a></li>
+        <li><a href="./thought-leadership/">Thought Leadership</a></li>
+        <li><a href="./testimonials/">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero on-dark" aria-labelledby="hero-title">
+      <div class="wrap">
         <div class="hero-grid">
-          <div class="avatar">
-            <img src="images/profile_photo.jpg" alt="Profile photo" />
-          </div>
-
+          <figure class="portrait">
+            <img src="./images/profile_photo.jpg" alt="Portrait of Deepa Shalini K" width="1232" height="1167" fetchpriority="high" />
+          </figure>
           <div>
-            <h1>DEEPA SHALINI K</h1>
-            <p class="subtitle">AI Product Owner • Generative AI Solutions</p>
-            <p class="summary">
-                AI Product Owner delivering end-to-end enterprise AI solutions, from 0→1 prototyping through to production and adoption. I partner with senior stakeholders to define product vision, shape roadmaps, and translate complex business challenges into scalable solutions with measurable business impact. With a developer background, I’m technically fluent across LLMs, agent workflows, and enterprise integrations, and use AI prototyping as a strategic tool to drive clarity, accelerate decisions, and secure buy-in. I’m also an experienced corporate speaker and moderator, known for executive storytelling, high-impact demos, and influencing VP-level stakeholders.
-              </p>
-
-            <div class="meta-row">
-              <span class="chip">Bangalore, India</span>
-              <a href="mailto:shalini.jul97@gmail.com" class="chip">Email</a>
-              <a href="https://www.linkedin.com/in/deepa-shalini-273385193/" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
-              <a href="Deepa_Shalini_K_Product_Owner_GenAI.pdf" target="_blank" rel="noopener noreferrer" class="chip">CV</a>
-              <a href="https://bcert.me/sjluelpqb" target="_blank" rel="noopener noreferrer" class="chip">CSPO® · Scrum Alliance</a>
-              <a href="recognition/" class="chip">Recognition</a>
+            <h1 id="hero-title">I transform traditional business processes to <em>AI-assisted</em> ones</h1>
+            <div class="hero-divider" aria-hidden="true"></div>
+            <p class="hero-role">AI Product Owner</p>
+            <div class="btn-row">
+              <a href="mailto:shalini.jul97@gmail.com" class="btn btn--solid">Email</a>
+              <a href="https://www.linkedin.com/in/deepa-shalini-273385193/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">LinkedIn</a>
             </div>
           </div>
         </div>
+        <a class="hero-scroll-cue" href="#experience">
+          <span>Scroll to see my work</span>
+          <svg class="hero-scroll-arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M2 5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
       </div>
-    </header>
+    </section>
 
-    <!-- =========================
-         SECTION 2 – TABS
-         ========================= -->
-    <main class="content">
-      <div class="container">
-        <section class="panel" aria-label="Professional details tabs">
-          <nav class="tabs" role="tablist" aria-label="Sections">
-            <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-work" id="btn-work">
-              Work Experience
-            </button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-achievements" id="btn-achievements">
-              Achievements
-            </button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-leadership" id="btn-leadership">
-              Leadership Positions
-            </button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-speaking" id="btn-speaking">
-              Thought Leadership & Writing
-            </button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-product" id="btn-product">
-              Product Portfolio
-            </button>
-          </nav>
+    <!-- ===== Work Experience (Career Impact Map: Sankey diagram) ===== -->
+    <section id="experience" class="experience" aria-labelledby="experience-title">
+      <div class="wrap wrap--wide">
+        <div class="section-head">
+          <h2 id="experience-title">Work Experience</h2>
+          <p class="lead">Ribbons run from each role through the skills it built to the results that followed. Hover or tap any role, skill or result to trace its path.</p>
+        </div>
 
-          <div class="tab-content">
-            <!-- TAB 1: Work Experience -->
-            <div class="tab-pane active" id="tab-work" role="tabpanel" aria-labelledby="btn-work">
-              <h2 class="section-title">Work Experience</h2>
+        <div id="sankey-container" class="career-sankey">
+          <noscript><p class="sx-noscript">This diagram needs JavaScript. Please enable it to explore the interactive career impact map.</p></noscript>
 
-              <div class="timeline">
-                <!-- Milestone 1 -->
-                <div class="t-item">
-                  <div class="t-top">
-                    <div class="role">Product Owner III – Generative AI Solutions</div>
-                    <div class="period">Sep 2025 – Present</div>
-                  </div>
-                  <div class="org">Thermo Fisher Scientific</div>
-                  <ul class="desc">
-                    <li>Led daily, iterative AI prototyping with business stakeholders to define requirements for an AI-assisted quoting assistant (precursor to Oracle CPQ), where initial needs were undefined: rapidly vibe-coding a new working prototype each cycle to pressure-test assumptions with stakeholders, <strong>converging on a business-approved solution projected to save $30M in 2027</strong></li>
-                    <li>Own end-to-end development of a <strong>GenAI-powered contract renewals decision-support platform</strong>, from executive discovery workshops and process mapping through solution design, AI prototyping, and production delivery, translating complex commercial workflows into AI-driven insights that surface non-compliance, upsell, and bundling opportunities: <strong>unlocking $3.1M in projected annual bookings</strong>.</li>
-                    <li>Own product vision, strategy, and roadmap for <strong>enterprise AI solutions in instrument services workflows</strong>, driving cross-functional execution from backlog through production adoption: <strong>resulting in $3.5M annual savings and 25× user growth</strong> following transition from a third-party solution.</li>
-                    <li>Conceived, built and deployed a <strong>full-stack 0→1 AI assistant MVP within ServiceNow for L1 support</strong> (developing back-end services, front-end UI, and integrations) to demonstrate product value and secure stakeholder buy-in, <strong>securing investment for production scale and reducing issue resolution time by 30%</strong>.</li>
-                  </ul>
-                </div>
+          <div class="sx-panel">
+            <p class="sx-scroll-hint" aria-hidden="true">Scroll &rarr;</p>
+            <div class="sx-chips" id="sx-chips" role="group" aria-label="Filter by role"></div>
 
-                <!-- Milestone 2 -->
-                <div class="t-item">
-                  <div class="t-top">
-                    <div class="role">Product Owner II – Generative AI Solutions</div>
-                    <div class="period">Sep 2024 – Aug 2025</div>
-                  </div>
-                  <div class="org">Thermo Fisher Scientific</div>
-                  <ul class="desc">
-                    <li>Led end-to-end development and production rollout of a <strong>GenAI-powered image processing platform</strong> (mandating minimal human-in-the-loop review as a core product requirement, defining evaluation criteria, governance frameworks, and success metrics), achieving a <strong>99% reduction in cost per image</strong>.</li>
-                    <li>Owned <strong>product roadmap and deployment</strong> of a <strong>GenAI-driven opportunity intelligence platform</strong>, integrating internal portfolio data with external bids, tenders, and grants: <strong>increasing qualified opportunities by 40% and driving $2M in incremental bookings</strong>.</li>
-                </div>
-
-                <!-- Milestone 3 -->
-                <div class="t-item">
-                  <div class="t-top">
-                    <div class="role">Software Engineer II</div>
-                    <div class="period">May 2022 – Sep 2024</div>
-                  </div>
-                  <div class="org">Thermo Fisher Scientific</div>
-                  <ul class="desc">
-                    <li>Led a flagship project to design and deliver analytics and visualisation experiences for NGS workflows within SampleManager LIMS, <strong>collaborating closely with biologists, subject-matter experts, pre-sales, and product teams</strong> to translate complex domain needs into scalable solutions and customer-facing demos: contributing to <strong>three major enterprise wins within a month.</strong></li>
-                    <li>Built and configured <strong>ML models and analytical dashboards</strong> using <strong>Python and SQL</strong> to identify <strong>fail-early samples</strong>, helping customers save resources and improve budgeting and planning for upcoming months.</li>
-                    <li>Built <strong>interactive BI dashboards and demo applications</strong> using <strong>Python, Plotly, C#, and SQL</strong>, supporting data-driven storytelling in pre-sales and customer engagements.</li>
-                  </ul>
-                </div>
-
-                <!-- Milestone 4 -->
-                <div class="t-item">
-                  <div class="t-top">
-                    <div class="role">Software Engineer I</div>
-                    <div class="period">Aug 2020 – May 2022</div>
-                  </div>
-                  <div class="org">Thermo Fisher Scientific</div>
-                  <ul class="desc">
-                    <li>Engineered <strong>industry-specific solutions</strong> in Platform for Science (PFS) LIMS and SampleManager LIMS platforms, reducing customer customisation effort by <strong>40%</strong>.</li>
-                    <li>Built <strong>configurable BI dashboards within SampleManager LIMS</strong> using <strong>SQL and C#</strong>, providing customers with a <strong>bird's-eye view of laboratory processes and compliance</strong>, enabling easy identification of bottlenecks and non-compliances.</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="sx-diagram-wrap">
+              <svg id="sx-sankey"></svg>
             </div>
 
-            <!-- TAB 2: Achievements -->
-            <div class="tab-pane" id="tab-achievements" role="tabpanel" aria-labelledby="btn-achievements">
-              <h2 class="section-title">Achievements</h2>
+            <section class="sx-detail" id="sx-detail" aria-live="polite"></section>
 
-              <p class="lead">
-                Global recognition for excellence in data visualisation, product design, and academic achievement: from generative AI-driven visualisation innovation to award-winning Plotly Dash app development and all-round academic performance.
-              </p>
-
-              <!-- Innovative/Unusual component (Spotlight Path) -->
-              <div class="spotlight" aria-label="Achievements spotlight list">
-                <div class="s-item">
-                  <div class="badge">🥈</div>
-                  <div class="s-body">
-                    <p class="s-title">Runner-Up – Plotly FIFA World Cup Challenge</p>
-                    <p class="s-meta">2026 • Plotly</p>
-                    <p class="s-text">
-                      Built an app for following World Cup statistics throughout the tournament, featuring unconventional visualisations of Elo rankings after every match so viewers could see who was leading at a glance. Commended for balancing rich, real-time statistics with clarity in a fast-moving, data-heavy event.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">🥇</div>
-                  <div class="s-body">
-                    <p class="s-title">Winner – Plotly Power BI App Challenge</p>
-                    <p class="s-meta">2026 • Plotly</p>
-                    <p class="s-text">
-                      Connected a Power BI semantic model of the AdventureWorks dataset to build a data app with innovative, uncommon visualisations. Praised for a visually distinctive app that made it easy to explore data and quickly surface key business insights.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">🥇</div>
-                  <div class="s-body">
-                    <p class="s-title">Winner – Plotly IBCS Chart Challenge</p>
-                    <p class="s-meta">2026 • Plotly</p>
-                    <p class="s-text">
-                      Engineered a reusable Plotly Studio prompt template that reproduces an IBCS-style business chart. Credited for a reproducible GenAI prompt that accurately recreated a complex, industry-standard business chart.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">✨</div>
-                  <div class="s-body">
-                    <p class="s-title">Peregrine Prize – Plotly Analytics Vibe-a-Thon</p>
-                    <p class="s-meta">2025 • Plotly</p>
-                    <p class="s-text">
-                      Honoured for creating a fast, insightful data app with the OECD wellbeing dataset using GenAI prompts, featuring unconventional, eye-catching visualisations that showcased the potential of AI-driven analytics.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">🥇</div>
-                  <div class="s-body">
-                    <p class="s-title">Winner – Plotly Autumn Community App Challenge</p>
-                    <p class="s-meta">2022 • Plotly</p>
-                    <p class="s-text">
-                      Selected for a visually polished, user-friendly app combining predictive forecasting with in-depth data exploration, using the Iowa liquor sales dataset.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">🥈</div>
-                  <div class="s-body">
-                    <p class="s-title">Runner-Up – Plotly Summer Community App Challenge</p>
-                    <p class="s-meta">2022 • Plotly</p>
-                    <p class="s-text">
-                      Recognised for building an intuitive, easy-to-navigate app that analysed Austin Animal Center shelter data to help increase cat adoption rates, with rich, engaging visualisations and a seamless user experience across pages.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">👩🏽‍🎓</div>
-                  <div class="s-body">
-                    <p class="s-title">Medal of Excellence for Best All-round Performance – M.Sc.</p>
-                    <p class="s-meta">2020 • IBAB, Bangalore</p>
-                    <p class="s-text">
-                      Honoured as an outstanding all-rounder for excellence across academics, research, public speaking, and extracurricular contributions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Education Section -->
-              <h3 style="margin-top: 3em; margin-bottom: 1em; font-size: 1.5em; font-weight: 600; color: #0f3d2e;">Education</h3>
-              
-              <div class="timeline">
-                <div class="t-item">
-                  <div class="t-top">
-                    <div class="role">M.Sc. Bioinformatics & Biotechnology</div>
-                    <div class="period">Jul 2018 – Jul 2020</div>
-                  </div>
-                  <div class="institute">Institute for Bioinformatics and Applied Biotechnology (IBAB), Bangalore</div>
-                </div>
-
-                <div class="t-item">
-                  <div class="t-top">
-                    <div class="role">B.Sc. Biotechnology</div>
-                    <div class="period">Jun 2015 – May 2018</div>
-                  </div>
-                  <div class="institute">Mount Carmel College, Bangalore</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 3: Leadership Positions -->
-            <div class="tab-pane" id="tab-leadership" role="tabpanel" aria-labelledby="btn-leadership">
-              <h2 class="section-title">Leadership Positions</h2>
-
-              <p class="lead">
-                Leadership roles focused on building inclusive communities, amplifying underrepresented voices in technology, and driving collaborative initiatives across organisations and institutions.
-              </p>
-
-              <!-- Spotlight cards for leadership positions -->
-              <div class="spotlight" aria-label="Leadership positions list">
-                <div class="s-item">
-                  <div class="badge">👩🏽‍💻</div>
-                  <div class="s-body">
-                    <p class="s-title">Women in IT Lead – Thermo Fisher Scientific</p>
-                    <p class="s-meta">2025–Ongoing</p>
-                    <ul class="s-text">
-                      <li>Led site-wide initiatives to amplify women in tech by enabling opportunities to lead technical sessions, build confidence, expand networks, and create visibility.</li>
-                      <li>Drove AI-native operations within the Women in IT committee, with all communications and artefacts created and reviewed using AI-assisted workflows.</li>
-                      <li>Moderated the Women in IT book club, curating women-centric reads to foster awareness of lived experiences and encourage inclusive allyship.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="s-item">
-                  <div class="badge">👩🏽‍🔬</div>
-                  <div class="s-body">
-                    <p class="s-title">Science Secretary – Mount Carmel College</p>
-                    <p class="s-meta">2017–2018</p>
-                    <ul class="s-text">
-                      <li>Organised and executed inter-collegiate science events and challenges, collaborating across departments and student committees.</li>
-                      <li>Ideated and led activities for the annual science fest, shaping themes, formats, and engagement strategies.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 4: Thought Leadership & Writing (Speaking/Moderation etc.) -->
-            <div class="tab-pane" id="tab-speaking" role="tabpanel" aria-labelledby="btn-speaking">
-              
-              <!-- Two-Feature Layout -->
-              <div class="two-feature-grid">
-                
-                <!-- LEFT: Speaking & Moderation -->
-                <div class="feature-card">
-                  <h3>Speaking & Moderation</h3>
-                  <p style="margin: 0 0 1.5em 0; font-size: 0.95em; color: #2f3e37; line-height: 1.6;">
-                    A confident public speaker and moderator, known for clear thinking, strong stage presence, and engaging senior leaders and large audiences with executive-ready communication.
-                  </p>
-
-                  <div class="featured-speaking-image">
-                    <span class="photo-badge">Moderator</span>
-                    <img src="images/SPEAKING_2.jpg" alt="Panel Discussion on Personal Branding">
-                    <div class="gallery-caption">Panel Discussion • 2025 • Personal Branding</div>
-                  </div>
-
-                  <a href="#full-gallery" class="view-gallery-link">View full gallery ↓</a>
-                </div>
-
-                <!-- RIGHT: Writing & Publications -->
-                <div class="feature-card">
-                  <h3>Writing & Publications</h3>
-                  <p style="margin: 0 0 1.5em 0; font-size: 0.95em; color: #2f3e37; line-height: 1.6;">
-                    As a published author for Plotly, I demonstrate how the same dataset can be reshaped into entirely different visualisations depending on the audience, topic, and story one is trying to tell – showing how the right visual choice doesn't just present data, but actively sets the narrative and shapes what insights an audience walks away with.
-                  </p>
-
-                  <a href="https://plotly.com/university/the-golden-trilogy-with-plotly/" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     style="text-decoration: none; display: block;">
-                    <div style="
-                      background: #ffffff;
-                      border-radius: 8px;
-                      padding: 1.25em;
-                      border: 1px solid rgba(15,61,46,.12);
-                      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-                      transition: all 0.25s ease;
-                    "
-                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.10)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.06)'">
-                      
-                      <span style="
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 6px;
-                        font-size: 0.7em;
-                        font-weight: 600;
-                        color: #ffffff;
-                        background: #000000;
-                        padding: 4px 10px;
-                        border-radius: 999px;
-                        margin-bottom: 0.6em;
-                      ">
-                        <img src="https://images.prismic.io/plotly-marketing-website-2/8f977c91-7b4e-4367-8228-26fbba2506e4_69e12d6a-fb65-4b6e-8423-9465a29c6028_plotly-logo-sm.png?auto=format%2Ccompress&fit=max&w=256" 
-                             alt="Plotly" 
-                             style="height: 14px; width: auto; display: inline-block; margin: 0;" />
-                        Publication
-                      </span>
-
-                      <h4 style="margin: 0 0 0.4em 0; font-size: 1.15em; font-weight: 600; color: #0f3d2e;">
-                        The Golden Trilogy with Plotly
-                      </h4>
-
-                      <p style="margin: 0 0 0.6em 0; font-size: 0.8em; color: #6c757d;">
-                        Published on <strong>Plotly</strong> • Apr 2026
-                      </p>
-
-                      <p style="margin: 0; font-size: 0.88em; color: #2f3e37; line-height: 1.5;">
-                        Explores how the same dataset can evolve from standard financial charts to expressive, narrative-driven visualisations.
-                      </p>
-
-                      <p style="margin-top: 0.8em; font-size: 0.85em; font-weight: 500; color: #0f3d2e;">
-                        Read article →
-                      </p>
-                    </div>
-                  </a>
-                </div>
-
-              </div>
-
-              <!-- Full Gallery Section -->
-              <div id="full-gallery" class="gallery-divider">
-                Speaking Engagements
-              </div>
-
-              <div class="speaking-gallery" aria-label="Speaking photos gallery">
-                <div class="gallery-item">
-                  <span class="photo-badge">Moderator</span>
-                  <img src="images/SPEAKING_1.jpg" alt="Speaking event 1" style="object-fit: contain;">
-                  <div class="gallery-caption">Panel Discussion • 2025 • Personal Branding</div>
-                </div>
-                <div class="gallery-item">
-                  <span class="photo-badge">Moderator</span>
-                  <img src="images/SPEAKING_2.jpg" alt="Speaking event 2" style="object-fit: contain;">
-                  <div class="gallery-caption">Panel Discussion • 2025 • Personal Branding</div>
-                </div>
-                <div class="gallery-item">
-                  <span class="photo-badge">Moderator</span>
-                  <img src="images/SPEAKING_3.jpeg" alt="Speaking event 3">
-                  <div class="gallery-caption">Panel Discussion • 2025 • Empathy in Leadership</div>
-                </div>
-                <div class="gallery-item">
-                  <span class="photo-badge">Moderator</span>
-                  <img src="images/SPEAKING_4.jpeg" alt="Speaking event 4">
-                  <div class="gallery-caption">Panel Discussion • 2025 • Empathy in Leadership</div>
-                </div>
-                <div class="gallery-item">
-                  <span class="photo-badge">Speaker</span>
-                  <img src="images/SPEAKING_5.jpg" alt="Speaking event 5">
-                  <div class="gallery-caption">Women's Day Celebration • 2025 • Accelerate Action</div>
-                </div>
-                <div class="gallery-item">
-                  <span class="photo-badge">MC and Science Secretary</span>
-                  <img src="images/SPEAKING_6.jpg" alt="Speaking event 6">
-                  <div class="gallery-caption">Science Fest • 2017 • Annual Science Fest, MCC</div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- TAB 5: Product Portfolio -->
-            <div class="tab-pane" id="tab-product" role="tabpanel" aria-labelledby="btn-product">
-              <h2 class="section-title">
-                Product Idea: ChaRtBot
-                <span class="info-icon-wrapper">
-                  <span class="info-icon" aria-label="Product positioning statement">ⓘ</span>
-                  <span class="tooltip">
-                    <table class="vision-table">
-                      <tr>
-                        <td><strong>For</strong></td>
-                        <td>Individuals who want to explore, understand, and communicate data quickly</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Who</strong></td>
-                        <td>Are slowed down by code-heavy tools, fragile AI outputs, or text-only responses</td>
-                      </tr>
-                      <tr>
-                        <td><strong>ChaRtBot is</strong></td>
-                        <td>A visual analytics assistant</td>
-                      </tr>
-                      <tr>
-                        <td><strong>That</strong></td>
-                        <td>Transforms natural-language questions and raw datasets into fast, interactive, and explainable single- and multi-chart visualisation, in seconds</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Unlike</strong></td>
-                        <td>Text-first chatbots or rigid, template-driven analytics tools</td>
-                      </tr>
-                      <tr>
-                        <td><strong>ChaRtBot prioritises</strong></td>
-                        <td>Speed, interactivity, and human-in-the-loop verification through dataset inspection, generated code visibility, and exportable outputs</td>
-                      </tr>
-                      <tr>
-                        <td><strong>While also</strong></td>
-                        <td>Proactively clarifying ambiguous intent, recovering from errors, suggesting exploratory analyses, surfacing outliers and patterns, and selecting appropriate analytical or modelling approaches, while keeping users confidently in control</td>
-                      </tr>
-                    </table>
-                  </span>
-                </span>
-              </h2>
-
-              <p class="lead" style="margin-top:-6px;">
-                ChaRtBot is a visual analytics assistant that enables researchers and data-driven individuals to explore, analyse, and model datasets using natural language, producing interactive, inspectable visualisation with full visibility into both data and AI-generated code.
-              </p>
-
-              <div style="text-align: center; margin: 2em auto; padding: 1.5em; background: #fbfaf5; border-radius: 8px; max-width: 700px;">
-                <a href="https://huggingface.co/spaces/deepa-shalini/ChaRtBot" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   style="display: block; cursor: pointer; transition: all 0.3s ease;"
-                   onmouseover="this.style.opacity='0.85'; this.style.transform='scale(1.02)';"
-                   onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';">
-                  <video 
-                    width="100%" 
-                    controls 
-                    style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
-                    poster="images/ChaRtBot_Thumbnail.png">
-                    <source src="videos/ChaRtBot Demonstration.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </a>
-                <p style="margin: 0.75em 0 0 0; font-size: 0.9em; color: #6c757d; line-height: 1.5;">
-                  No signup required. Upload a CSV and explore your data <br> through interactive, explainable visualisation, in seconds.</br>
-                  <br>
-                  👉 Try <a href="https://huggingface.co/spaces/deepa-shalini/ChaRtBot" target="_blank" rel="noopener noreferrer" style="color: #0f3d2e; font-weight: 500; text-decoration: underline;">ChaRtBot</a> live.
-                </br>
-                </p>
-              </div>
-
-              <div class="accordion" aria-label="Product details accordion">
-                <details class="acc">
-                  <summary>
-                    Product Vision and Strategy
-                    <span class="chev" aria-hidden="true">⌄</span>
-                  </summary>
-                  <div class="acc-body">
-                    <h4 style="font-size: 1.1em; font-weight: 600; margin-bottom: 0.5em; text-decoration: underline;">Product Vision</h4>
-                    <p>
-                      ChaRtBot is a visual analytics assistant designed to support the full analytical lifecycle, from exploratory data analysis to modelling and research communication, through natural-language interaction and transparent, interactive visualisation.
-                    </p>
-                    <p>
-                      The vision is to make data exploration and analysis visual-first, reliable, and explainable, enabling individuals to move from raw datasets to defensible insights while keeping humans firmly in the loop through dataset inspection, explicit transformations, generated code visibility, and reproducible outputs.
-                    </p>
-                    <p>
-                      Unlike text-centric AI tools that respond with explanations, ChaRtBot responds with interactive visual reasoning. Unlike traditional analytics platforms that prioritise dashboards and configuration, ChaRtBot is lightweight, web-based, and requires no setup, lowering the barrier to rigorous analysis without sacrificing credibility.
-                    </p>
-                    <p>
-                      As ChaRtBot matures, it extends beyond exploration to support publication-grade outputs, including static visualisation suitable for academic and professional dissemination, ensuring insights can move seamlessly from analysis to communication.
-                    </p>
-                    
-                    <h4 style="font-size: 1.1em; font-weight: 600; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Product Strategy</h4>
-                    <p>
-                      ChaRtBot is intentionally designed around four core principles:
-                    </p>
-                    <p><strong>1. Visual reasoning first</strong></p>
-                    <p>
-                      visualisation are not an output format; they are the primary medium for reasoning.
-                    </p>
-                    <p>
-                      ChaRtBot prioritises interactive, exploratory visuals that allow users to:
-                    </p>
-                    <ul style="margin-left: 1.5em; margin-bottom: 1em;">
-                      <li>Inspect distributions, relationships, and outliers</li>
-                      <li>Iterate quickly on hypotheses</li>
-                      <li>Build intuition before formal modelling</li>
-                    </ul>
-                    <p>
-                      Text and explanations exist to support visuals, not replace them.
-                    </p>
-                    <p><strong>2. Progressive depth</strong></p>
-                    <p>
-                      ChaRtBot evolves with the user’s analytical needs.
-                    </p>
-                    <ul style="margin-left: 1.5em; margin-bottom: 1em;">
-                      <li>Early interactions prioritise fast, interactive exploration</li>
-                      <li>Generated code and analytical steps are explained in plain language alongside visual outputs</li>
-                      <li>Advanced workflows support full-scale exploratory data analysis and machine learning</li>                     
-                      <li>Mature workflows enable publication-ready static outputs suitable for academic and professional dissemination</li>
-                    </ul>
-                    <p>
-                      This progression allows non-technical users to start quickly while enabling deeper, research-grade analysis over time, without forcing complexity upfront.
-                    </p>
-                    <p><strong>3. Transparency as a non-negotiable constraint</strong></p>
-                    <p>
-                      All analysis performed by ChaRtBot is inspectable and reproducible.
-                    </p>
-                    <p>
-                      Users can:
-                    </p>
-                    <ul style="margin-left: 1.5em; margin-bottom: 1em;">
-                      <li>Examine raw and transformed data</li>
-                      <li>Review AI-generated Python code</li>
-                      <li>Understand assumptions, aggregations, and modelling choices through both code and natural-language explanations</li>
-                      <li>Export both interactive and static outputs with confidence </li>
-                    </ul>
-                    <p>
-                      Transparency is treated as a prerequisite for trust, scientific validity, and human oversight at every stage of the workflow.
-                    </p>
-                    <p><strong>4. Individual- and research-first adoption</strong></p>
-                    <p>
-                      ChaRtBot is built for individual researchers, students, and data-driven professionals working on exploratory analysis, learning, and research projects.
-                    </p>
-                    <p>
-                      It intentionally avoids the overhead of enterprise BI tools (such as rigid schemas, dashboards, and licensing complexity) while still supporting workflows that demand analytical rigour and publishable outputs.
-                    </p>
-                  </div>
-                </details>
-
-                <details class="acc">
-                  <summary>
-                    Roadmap
-                    <span class="chev" aria-hidden="true">⌄</span>
-                  </summary>
-                  <div class="acc-body">
-                    <h4 style="font-size: 1.2em; font-weight: 700; margin-bottom: 0.5em;">Product Roadmap</h4>
-                    <p>
-                      ChaRtBot is developed in phases, each progressively increasing analytical depth, reliability, and usability while maintaining transparency and user control.
-                    </p>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 0: Current MVP</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Deliver instant, shareable visual insights from user-provided data</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>CSV upload with interactive data table (sort, filter, scan)</li>
-                      <li>Natural-language prompts for interactive chart generation</li>
-                      <li>Support for complex subplotting and multi-chart layouts</li>
-                      <li>Visibility into the generated Python code</li>
-                      <li>Interactive HTML export</li>
-                      <li>Static image export</li>
-                      <li>Web-based, link-only access (no installation required)</li>
-                      <li>Chart rendering within seconds</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
-                    <ul>
-                      <li>Faster visual exploration compared to text-based AI tools and desktop software</li>
-                      <li>Shareable interactive outputs for analysis and communication</li>
-                      <li>Transparency through dataset inspection and code visibility</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 1: Explainability & Reliability</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Expand accessibility to non-technical users while increasing trust and robustness</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>Plain-language explanations of generated code</li>
-                      <li>Visual explanations of data transformations</li>
-                      <li>Explicit communication of system assumptions</li>
-                      <li>Pre-execution validation (schema, columns, types)</li>
-                      <li>Multi-pass code correction to recover from errors</li>
-                      <li>Fallback chart strategies when complex visualisation fail</li>
-                      <li>User confidence checks and satisfaction feedback</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">Why this matters</strong></p>
-                    <ul>
-                      <li>Fewer failed or misleading outputs</li>
-                      <li>Clear understanding of how results are produced, even to non-Python users</li>
-                      <li>Increased confidence in correctness and reliability</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 2: Conversational Refinement & Intent Clarification</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Resolve ambiguity before it leads to incorrect analysis</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>Detection of ambiguous or incomplete prompts</li>
-                      <li>Targeted follow-up questions to clarify intent</li>
-                      <li>Explicit declaration of assumptions when clarification is skipped</li>
-                      <li>Chart and analysis structure suggestions</li>
-                      <li>Guided disambiguation for multi-structure datasets (e.g. multi-sheet files), including schema and subset selection</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
-                    <ul>
-                      <li>Fewer incorrect or misaligned charts</li>
-                      <li>More collaborative, analyst-like interaction</li>
-                      <li>Reduced trial-and-error prompting</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 3: Advanced EDA & Statistical Analysis</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Enable deeper reasoning beyond individual charts</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>Automated and guided exploratory data analysis</li>
-                      <li>Distribution, correlation, and outlier detection</li>
-                      <li>Statistical analysis with visual explanations</li>                      
-                      <li>Dataset-aware chart recommendations</li>
-                      <li>Advanced techniques such as PCA, clustering, and dimensionality reduction</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
-                    <ul>
-                      <li>Faster discovery of patterns and anomalies</li>
-                      <li>Scalable exploration of complex datasets</li>
-                      <li>Shift from charting to analytical reasoning</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 4: Machine Learning–Augmented Analysis</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Support predictive and inferential analysis grounded in exploratory understanding</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>Scalable exploratory data analysis for large datasets</li>
-                      <li>Guided transition from EDA to modelling</li>
-                      <li>Task-aware model selection</li>
-                      <li>Model training for prediction and classification</li>
-                      <li>Accuracy evaluation using visual diagnostics (e.g. error distributions, confusion matrices)</li>
-                      <li>Clear reporting of accuracy, model performance, limitations, and assumptions</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
-                    <ul>
-                      <li>Predictive insights without manual ML setup</li>
-                      <li>Explainable and defensible modelling outcomes</li>
-                      <li>Clear understanding of model behaviour and reliability</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 5: Real-Time & External Data Integration</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Reduce dependency on manual dataset uploads</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>Integration with public and real-time data sources</li>
-                      <li>Source citation and provenance visibility</li>
-                      <li>Dataset enrichment and combination</li>
-                      <li>Data freshness checks</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">User Value</strong></p>
-                    <ul>
-                      <li>Faster insights without manual data collection</li>
-                      <li>Support for time-sensitive and contextual analyses</li>
-                      <li>Broader analytical possibilities beyond static files</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">Phase 6: Publication-Grade Outputs & Sharing</h5>
-                    <p><strong style="font-size: 1.05em;">Goal:</strong> Enable high-quality communication of insights</p>
-                    <p><strong style="font-size: 1.05em;">Capabilities</strong></p>
-                    <ul>
-                      <li>Publication-ready chart styling and themes</li>
-                      <li>High-resolution static exports for papers, posters, and presentations</li>
-                      <li>Versioned chart history</li>
-                      <li>Shareable links with embedded interactivity</li>
-                    </ul>
-                    <p><strong style="font-size: 1.05em;">Strategic Impact</strong></p>
-                    <ul>
-                      <li>Seamless transition from data → analysis → communication</li>
-                      <li>Outputs suitable for reports, presentations, and publication</li>
-                      <li>Reduced friction in the final mile of analysis</li>
-                    </ul>
-                  </div>
-                </details>
-
-                <details class="acc">
-                  <summary>
-                    KPIs and Success Metrics
-                    <span class="chev" aria-hidden="true">⌄</span>
-                  </summary>
-                  <div class="acc-body">
-                    <p>
-                      ChaRtBot's success is measured across <strong>adoption, insight velocity, reliability, and trust</strong>, with additional metrics tracking whether users progress towards deeper analytical workflows over time.
-                    </p>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">1. Adoption & Core Engagement</h5>
-                    <p><strong style="font-size: 1.05em;">Why:</strong> To validate that ChaRtBot delivers immediate, repeatable value as part of users' data exploration workflow.</p>
-                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
-                    <ul>
-                      <li>Weekly Active Users (WAU)</li>
-                      <li>Datasets analysed per active user</li>
-                      <li>Average charts generated per dataset</li>
-                      <li>Percentage of sessions with conversational follow-up prompts <em>(Phase 2+)</em></li>
-                      <li>Usage rate of multi-chart and subplot layouts</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">2. Insight Velocity & Exploration Quality</h5>
-                    <p><strong style="font-size: 1.05em;">Why:</strong> ChaRtBot's primary value is helping users reach meaningful insights quickly through visual reasoning.</p>
-                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
-                    <ul>
-                      <li>Median time to first chart</li>
-                      <li>Median time to first follow-up analysis</li>
-                      <li>Average number of chart iterations per dataset</li>
-                      <li>Percentage of sessions progressing beyond a single chart</li>
-                    </ul>
-                    <p><strong>NOTE:</strong> Fewer iterations with deeper follow-ups is a positive signal, not a failure.</p>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">3. Performance & Reliability</h5>
-                    <p><strong style="font-size: 1.05em;">Why:</strong> Analytical trust breaks quickly when outputs fail, stall, or behave inconsistently.</p>
-                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
-                    <ul>
-                      <li>Chart render success rate</li>
-                      <li>Median chart render time</li>
-                      <li>Error recovery success rate <em>(Phase 1+)</em></li>
-                      <li>Drop-off rate during chart generation or correction flows</li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">4. Trust, Transparency & Explainability</h5>
-                    <p><strong style="font-size: 1.05em;">Why:</strong> ChaRtBot is explicitly human-in-the-loop; trust is demonstrated through inspection, validation, and reuse.</p>
-                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
-                    <ul>
-                      <li>Percentage of sessions where users inspect generated code</li>
-                      <li>Percentage of sessions where users view natural-language explanations of analytical steps <em>(Phase 1+)</em></li>
-                      <li>Percentage of exports reused without modification</li>
-                      <li>User-reported confidence in correctness after analysis <em>(Phase 1+)</em></li>
-                    </ul>
-                    <p><strong>NOTE:</strong> Reuse without modification is a strong trust signal.</p>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">5. Analytical Depth & Workflow Progression</h5>
-                    <p><strong style="font-size: 1.05em;">Why:</strong> To measure whether users move from basic visual exploration towards deeper analytical reasoning over time.</p>
-                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
-                    <ul>
-                      <li>Percentage of sessions using guided EDA features <em>(Phase 3+)</em></li>
-                      <li>Percentage of datasets progressing from EDA to modelling <em>(Phase 4+)</em></li>
-                      <li>Frequency of model evaluation or iteration based on diagnostics <em>(Phase 4+)</em></li>
-                      <li>User-reported clarity around assumptions and limitations <em>(Phase 3+)</em></li>
-                    </ul>
-                    
-                    <h5 style="font-size: 1.1em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; text-decoration: underline;">6. Retention & Longitudinal Value</h5>
-                    <p><strong style="font-size: 1.05em;">Why:</strong> Long-term success depends on whether ChaRtBot grows with users rather than being a one-off utility.</p>
-                    <p><strong style="font-size: 1.05em;">Metrics</strong></p>
-                    <ul>
-                      <li>Retention rate by analytical depth (basic vs advanced users)</li>
-                      <li>Increase in average workflow depth per returning user</li>
-                      <li>Repeat analysis on the same dataset over time</li>
-                      <li>Percentage of users adopting new phases as they are released</li>
-                    </ul>
-                  </div>
-                </details>
-              </div>
-            </div>
+            <div class="sr-only" id="sx-alt"></div>
           </div>
 
-          <!-- Footer -->
-          <footer style="font-size: 10px; color: #49685D; text-align: center; margin-top: 24px; margin-bottom: 0; padding-top: 20px; padding-bottom: 20px; border-top: 1px solid rgba(15,61,46,.18); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
-            © 2026 Deepa Shalini K. All rights reserved.
-          </footer>
-        </section>
+          <p class="sx-note">Ribbon width is an estimate of emphasis within each role and does not measure dollar value. The $30M is a projection for 2027, not realised savings.</p>
+        </div>
       </div>
-    </main>
-  </div>
+    </section>
+  </main>
 
-  <!-- External JavaScript -->
-  <script src="script.js"></script>
-  
+  <!-- ===== Site footer (keep identical on every page) ===== -->
+  <footer class="site-footer on-dark">
+    <div class="wrap">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./product-portfolio/">Product Portfolio</a></li>
+          <li><a href="./global-recognition/">Global Recognition</a></li>
+          <li><a href="./thought-leadership/">Thought Leadership</a></li>
+          <li><a href="./testimonials/">Testimonials</a></li>
+        </ul>
+      </nav>
+      <div class="footer-row">
+        <p>© 2026 Deepa Shalini K. All rights reserved.</p>
+        <a class="footer-credential" href="https://bcert.me/sjluelpqb" target="_blank" rel="noopener noreferrer">CSPO® · Scrum Alliance</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js?v=4" defer></script>
+
+  <!-- Career Impact Map (Sankey): landing page only -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js" defer></script>
+  <script src="./js/career-sankey.js?v=1" defer></script>
+
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://deepa-shalini.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
