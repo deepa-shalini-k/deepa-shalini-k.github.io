@@ -494,6 +494,8 @@ a{ color: inherit; }
 /* ---------- Product Portfolio ---------- */
 .demo{ margin: 32px 0; }
 .demo video{ width: 100%; border-radius: var(--radius-lg); background: var(--forest); }
+.demo a{ display: block; }
+.demo img{ display: block; width: 100%; height: auto; border-radius: var(--radius-lg); border: 2px solid var(--sage-soft); }
 .demo figcaption{ margin-top: 14px; color: var(--olive-text); font-size: .95rem; }
 .demo figcaption a{ color: var(--ink); }
 
